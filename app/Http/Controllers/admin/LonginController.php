@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers\admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class LonginController extends Controller
+{
+    public function index()
+    {
+
+
+    	return view('admin/index',['title'=>'后台首页']);
+    }
+
+    public function admin()
+    {
+    	return view('layout/admin');
+    }
+
+}
