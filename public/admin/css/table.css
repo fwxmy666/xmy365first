@@ -29,7 +29,16 @@
 
 .mws-table thead tr th:first-child {
     border-left: none;
+	width:100px;
+	height:30px;
 }
+
+.mws-table thead tr th:nth-child(3){
+	height:30px;
+	width:100px;
+}
+
+
 
 .mws-table thead tr th {
     padding: 10px 16px;
@@ -48,11 +57,13 @@
     border-left-width: 1px;
     border-left-style: dotted;
     border-left-color: #bebebe !important;
+	height:30px;
 }
 
 .mws-table tbody td:first-child, 
 .mws-table tfoot td:first-child {
     border-left: none;
+	width:20px;
 }
 
 .mws-table tbody tr:nth-child(2n+1) {

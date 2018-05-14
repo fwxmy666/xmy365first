@@ -75,7 +75,7 @@
                                         Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
                                     </span>
                                     <span class="time">
-                                        January 21, 2012
+                                        January 21, 2018
                                     </span>
                                 </a>
                             </li>
@@ -88,6 +88,12 @@
                 </div>
             </div>
             
+            <?php 
+
+                $res = DB::table('users')->where('uid',session('uid'))->first();
+             ?>
+
+
             <!-- Messages -->
             <div id="mws-user-message" class="mws-dropdown-menu">
             	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
@@ -106,7 +112,7 @@
                                         Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
                                     </span>
                                     <span class="time">
-                                        January 21, 2012
+                                        January 21, 2018
                                     </span>
                                 </a>
                             </li>
@@ -130,12 +136,12 @@
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
-                        香满园电商城
+                        {{$res->uname}}
                     </div>
                     <ul>
-                    	<li><a href="#">修改头像</a></li>
-                        <li><a href="#">修改密码</a></li>
-                        <li><a href="index.html">退出</a></li>
+                    	<li><a href="#">头像修改</a></li>
+                        <li><a href="/admin/upword/{{$res->uid}}">修改密码</a></li>
+                        <li><a href="/admin/loginout/{{$res->uid}}">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -178,12 +184,11 @@
                             <i class="icon-users" ></i>用户管理
                         </a>
                         <ul class="closed">
-                            <li><a href="/admin/user/create">添加用户</a></li>
-                            <li><a href="/admin/user">用户管理</a></li>
+                            <li><a href="/admin/users/create">添加用户</a></li>
+                            <li><a href="/admin/users">用户管理</a></li>
                             <li><a href="">管理员</a></li>
                             <li><a href="">普通用户</a></li>
-                            <li><a href="">用户资本资料</a></li>
-                            <li><a href="">积分管理</a></li>
+                            
                             
                         </ul>
                     </li>
@@ -193,7 +198,7 @@
                             <i class="icon-users" ></i>商品管理
                         </a>
                         <ul class="closed">
-                            <li><a href="/admin/user/create">添加商品</a></li>
+                            <li><a href="/admin/category/create">添加商品</a></li>
                              <li><a href="/admin/user">管理改删搜索</a></li>
                             
                         </ul>
@@ -205,7 +210,7 @@
                         </a>
                         <ul class="closed">
                             
-                            <li><a href="/admin/user">浏览订单</a></li>
+                            <li><a href="/admin/orders">浏览订单</a></li>
                             
                         </ul>
                     </li>
