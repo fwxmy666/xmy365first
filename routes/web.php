@@ -55,6 +55,27 @@ Route::group(['middleware'=>'login'],function(){
 		//后台订单管理
 	Route::resource('admin/orders','admin\OrdersController');
 
+	//后台跳转到前台首页
+	Route::get('admin/adhome/{uid}','admin\LonginController@adhome');
+
+	//后台轮播图添加
+	Route::get('admin/lunbo','admin\LunboController@index');
+	Route::get('admin/lunbo/add','admin\LunboController@add');
+	Route::post('admin/lunbo/store','admin\LunboController@store');
+	Route::get('admin/lunbo/{lid}/edit','admin\LunboController@edit');
+	Route::get('admin/lunbo/{lid}/update','admin\LunboController@update');
+	Route::post('admin/lunbo/{lid}/delete','admin\LunboController@delete');
+
+	Route::get('admin/lunbo/{lid}/lundetails','admin\LunboController@lundetails');
+	
+	//后台友情链接
+	Route::resource('admin/friends','admin\FriendsController');
+
+
+
+
+
+
 });
 
 
@@ -65,3 +86,10 @@ Route::get('/','home\IndexController@index');
 
 //前台列表页
 Route::get('home/list','home\IndexController@list');
+
+//前台轮播图
+Route::get('lunbo/lunbodetails/{lid}','home\lunbo\LunbodetailsController@index');
+
+
+
+

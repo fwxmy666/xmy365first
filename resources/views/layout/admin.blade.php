@@ -39,6 +39,10 @@
 
 <body>
 
+     <?php 
+
+                $res = DB::table('users')->where('uid',session('uid'))->first();
+     ?>
 	<!-- Themer (Remove if not needed) -->  
 	
     <!-- Themer End -->
@@ -57,7 +61,12 @@
         
         <!-- User Tools (notifications, logout, profile, change password) -->
         <div id="mws-user-tools" class="clearfix">
-        
+            <div id="mws-user-notif" class="mws-dropdown-menu">
+                <a href="/admin/adhome/{{$res->uid}}" class="mws-dropdown-trigger">前台首页</a>
+            
+            </div>
+
+
         	<!-- Notifications -->
         	<div id="mws-user-notif" class="mws-dropdown-menu">
             	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
@@ -88,15 +97,13 @@
                 </div>
             </div>
             
-            <?php 
-
-                $res = DB::table('users')->where('uid',session('uid'))->first();
-             ?>
+           
 
 
             <!-- Messages -->
             <div id="mws-user-message" class="mws-dropdown-menu">
-            	<a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
+            	
+                <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
                 
                 <!-- Unred messages count -->
                 <span class="mws-dropdown-notif">35</span>
@@ -107,6 +114,7 @@
                         <ul class="mws-messages">
                         	<li class="read">
                             	<a href="#">
+
                                     <span class="sender">John Doe</span>
                                     <span class="message">
                                         Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
@@ -186,8 +194,7 @@
                         <ul class="closed">
                             <li><a href="/admin/users/create">添加用户</a></li>
                             <li><a href="/admin/users">用户管理</a></li>
-                            <li><a href="">管理员</a></li>
-                            <li><a href="">普通用户</a></li>
+                            
                             
                             
                         </ul>
@@ -244,19 +251,19 @@
                             <i class="icon-users" ></i>友情链接管理
                         </a>
                         <ul class="closed">
-                            <li><a href="/admin/user/create">添加链接</a></li>
-                            <li><a href="/admin/user">链接管理</a></li>
+                            <li><a href="/admin/friends/create">添加链接</a></li>
+                            <li><a href="/admin/friends">链接管理</a></li>
                             
                         </ul>
                     </li>
                     
                      <li>
                         <a href="#">
-                            <i class="icon-users" ></i>品牌管理
+                            <i class="icon-users" ></i>轮播图管理
                         </a>
                         <ul class="closed">
-                            <li><a href="/admin/user/create">添加用户</a></li>
-                            <li><a href="/admin/user">用户管理</a></li>
+                            <li><a href="/admin/lunbo/add">添加图片</a></li>
+                            <li><a href="/admin/lunbo">浏览图片</a></li>
                             
                         </ul>
                     </li>

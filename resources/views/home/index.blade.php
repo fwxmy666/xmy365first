@@ -1182,38 +1182,20 @@
 
 
 
-
 	
 	<!--全屏滚动-->
 <div class="ad" style="min-width: auto;">
 	<div class="b-img">
 	
-	    <a href="/http://www.xmy365.com/news/zt/20180422zhuzt?a" style="background:url(/static/images/banner-20180426-01.png) center no-repeat;"></a>
+	    <!--<a href="/http://www.xmy365.com/news/zt/20180422zhuzt?a" style="background:url(/static/images/banner-20180426-01.png) center no-repeat;"></a>-->
 	     
-	
-	    <a href="/http://www.xmy365.com/news/zt/20180422yingtao" style="background:url(/static/images/banner1.jpg) center no-repeat;"></a>
-	     
-	
-	    <a href="/http://www.xmy365.com/news/zt/20180422caicaisee" style="background:url(/static/images/banner-20180426-02.png) center no-repeat;"></a>
-	     
-	
-	    <a href="/http://www.xmy365.com/news/zt/20180422zhuzt?c" style="background:url(/static/images/banner-20180426-03.png) center no-repeat;"></a>
-	     
+		
+	    @foreach($lunboimg as $K=>$v)
+
+	     <a href="/lunbo/lunbodetails/{{$v->lid}}" style="background:url({{$v->path}}) center no-repeat;"></a>
 	
 	    
-	     <a href="/goods/8346/0/0" style="background:url(/static/images/pc-banner-20180504-8346-1.png) center no-repeat;"></a>
-	
-	    
-	     <a href="/goods/8344/0/0" style="background:url(/static/images/pc-banner-20180504-8344-2.png) center no-repeat;"></a>
-	
-	    
-	     <a href="/goods/4187/0/0" style="background:url(/static/images/pc-banner-20180504-4187-3.png) center no-repeat;"></a>
-	
-	    
-	     <a href="/goods/6797/0/0" style="background:url(/static/images/pc-banner-20180504-6797-4.png) center no-repeat;"></a>
-	
-	    
-	     <a href="/goods/5925/0/0" style="background:url(/static/images/pc-banner-20180504-5925-5.png) center no-repeat;"></a>
+	    @endforeach
 	
 	</div>
 	<div class="b-list" style="margin-top:360px;padding-top:0;"></div>
@@ -2565,16 +2547,21 @@
         <p class="mt10">增值电信业务经营许可证：渝B2-20120004</p>
         <p class="mt10"><a href="/http://www.miitbeian.gov.cn" style="color: white;text-decoration: underline">渝ICP14001106号-8</a> </p> -->
     </div>
+
+	
+	<!--友情链接-->
+
     <div class="beian">
         <ul class="beian-ul">
-            <a href="/http://www.cqgseb.cn/ztgsgl/WebSiteMonitoring/WebUI/XFWQ/Index.aspx?xh=17" target="_blank"><li class="beian-li"><img src="static/picture/biean1.png"/></li></a>
-            <a href="/http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010302000205" target="_blank"><li class="beian-li"><img src="static/picture/biean2.png"/></li></a>
-            <a href="/http://113.207.120.45:7010/wljyzbs/index.html?sfdm=120150115151516296646#/index.html?sfdm=120150115151516296646" target="_blank"><li class="beian-li"><img src="static/picture/biean3.png"/></li></a>
-            <a href="/http://www.cqtransit.com/" target="_blank"><li class="beian-li"><img src="static/picture/biean4.png"/></li></a>
-            <a href="/http://www.cqgyjt.com/" target="_blank"><li class="beian-li"><img src="static/picture/biean5.png"/></li></a>
+        	 @foreach($friends as $K=>$v)
+            <a href="{{$v->http}}" target="_blank"><li class="beian-li"><img src="{{$v->urls}}" width="100" height="50" /></li></a>
+           	@endforeach
             <div style="clear: both;"></div>
         </ul>
-    </div>  
+    </div> 
+
+	<!--友情链接-->
+
 </footer>
 
 <script type="text/javascript" src="static/js/jquery-1.9.1.min.js"></script>

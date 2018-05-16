@@ -4,6 +4,9 @@ namespace App\Http\Controllers\home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+
+
 
 class IndexController extends Controller
 {
@@ -11,7 +14,10 @@ class IndexController extends Controller
     //
     public function index()
     {
-    	return view('home.index',['title'=>'香满园农产品商城']);
+    	$friends = DB::table('friends')->get();
+        $lunboimg = DB::table('lunbo')->get();
+        //dd($friends);
+        return view('home.index',['title'=>'香满园农产品商城','lunboimg'=>$lunboimg,'friends'=>$friends]);
     }
 
     public function list()
@@ -21,4 +27,8 @@ class IndexController extends Controller
         return view('home.goods.list',['title'=>'商品列表页']);
 
     }
+
+    
+
+
 }

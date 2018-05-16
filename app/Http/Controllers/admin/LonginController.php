@@ -83,6 +83,16 @@ class LonginController extends Controller
         return redirect('layout/login');
     }
 
+
+
+    //跳转到前台首页
+    public function adhome(Request $request ,$uid)
+    {
+        $request->Session()->forget('uid');
+
+        return redirect('/');
+    }
+
     //后台登录验证码
     public function captcha($tmp)
     {
