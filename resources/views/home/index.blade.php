@@ -2554,7 +2554,7 @@
     <div class="beian">
         <ul class="beian-ul">
         	 @foreach($friends as $K=>$v)
-            <a href="{{$v->http}}" target="_blank"><li class="beian-li"><img src="{{$v->urls}}" width="100" height="50" /></li></a>
+            <a href="{{$v->http}}" target="_blank"><li class="beian-li"><img src="{{$v->urls}}" width="150" height="50" /></li></a>
            	@endforeach
             <div style="clear: both;"></div>
         </ul>

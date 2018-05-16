@@ -1538,16 +1538,26 @@
         <p class="mt10">增值电信业务经营许可证：渝B2-20120004</p>
         <p class="mt10"><a href="/http://www.miitbeian.gov.cn" style="color: white;text-decoration: underline">渝ICP14001106号-8</a> </p> -->
     </div>
+
+<!--友情链接-->
+	<?php
+		use App\Http\Controllers\home\IndexController;
+		
+		$friends = IndexController::getmessage();
+	?>
+
     <div class="beian">
         <ul class="beian-ul">
-            <a href="/http://www.cqgseb.cn/ztgsgl/WebSiteMonitoring/WebUI/XFWQ/Index.aspx?xh=17" target="_blank"><li class="beian-li"><img src="/static/picture/biean1_1.png"/></li></a>
-            <a href="/http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010302000205" target="_blank"><li class="beian-li"><img src="/static/picture/biean2_1.png"/></li></a>
-            <a href="/http://113.207.120.45:7010/wljyzbs/index.html?sfdm=120150115151516296646#/index.html?sfdm=120150115151516296646" target="_blank"><li class="beian-li"><img src="/static/picture/biean3_1.png"/></li></a>
-            <a href="/http://www.cqtransit.com/" target="_blank"><li class="beian-li"><img src="/static/picture/biean4_1.png"/></li></a>
-            <a href="/http://www.cqgyjt.com/" target="_blank"><li class="beian-li"><img src="/static/picture/biean5_1.png"/></li></a>
+			@foreach($friends as $k=>$v)
+            <a href="{{$v->http}}" target="_blank"><li class="beian-li"><img src="{{$v->urls}}" width="150px" height="50px" /></li></a>
+			@endforeach
             <div style="clear: both;"></div>
+
         </ul>
     </div>  
+
+<!--友情链接-->
+
 </footer>
 
 <script type="text/javascript" src="/static/js/jquery-1.9.1.min_1.js"></script>

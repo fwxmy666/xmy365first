@@ -28,6 +28,11 @@ class IndexController extends Controller
 
     }
 
+    public static function getmessage()
+    {
+        $friends = DB::table('friends')->get();
+        return $friends;
+    }
     
 
 
