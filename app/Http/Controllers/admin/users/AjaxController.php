@@ -67,7 +67,7 @@ class AjaxController extends Controller
 
       //哈希
       if(!Hash::check($oldpassword,$res->password)){
-
+ 
         return back()->with('msg','输入的旧密码错误');
       }
 

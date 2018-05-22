@@ -1205,1145 +1205,62 @@
  <!--内容部分-->
 <div class="container" style="margin-bottom:0px;background:#EFEFEF url('static/images/page-bg.png') 50.2% no-repeat fixed;padding-top:25px;">
 	<div class="tab-nav w-1250">
-		<ul>
-			<li class="active">冰点价</li>
-			<li>天天特价</li>
-			<li>买即赠</li>
-			<li>每周特价</li>
-			<li>热卖商品</li>
-			<li>新品上市</li>
-			<li>热销好货</li>
+		<ul id='tabspcate'>
+			@foreach($spcate as $k=>$v)
+
+			<li class='spcate' value='{{$v->id}}'>{{$v->cname}}</li>
+
+			@endforeach
 		</ul>
 	</div>
 	<input type="text" value="2018/05/07 11:59:49" style="display: none;" id="daoji"/>
+
 	<div class="tab-content clearfix w-1250">
 		<!-- 冰点价 -->
 		<div class="point-all" style="height:330px;">
 			<div class="time-esc"><img src="static/picture/ico-kql-mx@2x.png" alt="" class="time-icon"><span class="cost" style="color: black;">距离活动结束还有 : <span id="freeActivityTime"></span><span class="date-cost">(每日<span>12:00</span>-次日<span>12:00</span>开抢)</span></div>
 			<ul class="rob-list">
 				
-					
-							<li class="list-item active">
+				@foreach($special as $k=>$v)	
+				<li class="list-item active">
+				 
+					<a href="/home/spgoods/{{$v->id}}">
+				
+						<span class="date-img">
+							<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月22日</p><p>12:00</p></div>
+						</span>
+
+						<div class="img-wrap">
+
+			            	<img alt="" src="{{$v->spicture}}" class="shop-img">
+			
+						</div>
+						<div class="rob-last">
+							<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">{{$v->sprice}}</span> </div>
+						</div>
+
+						<div class="shop-name" title="{{$v->sname}}">{{$v->sname}}</div>
+						<div class="rob-last">
 							 
-							<a href="/goods/8223/2/35?time=5月6日&url=">
-						
-								<span class="date-img">
-									<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月6日</p><p>12:00</p></div>
-								</span>
-								<div class="img-wrap">
-									
-        
-
-
-
-
-
-<img alt="" src="static/picture/050400249801-001.jpg" class="shop-img">
-        
-									
-									
-								</div>
-								<div class="rob-last">
-									<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">1.00</span> </div>
-								</div>
-								<div class="shop-name" title="[聚品坊] 爱莲巧榛子花生味饼干 190g/袋">[聚品坊] 爱莲巧榛子花生味饼干 190g/袋</div>
-								<div class="rob-last">
-									 
-									<button type="button" class="btn-rob-g re">立即购买</button>
-									
-									 
-								</div>
-							 
-							</a>
-							
-							</li>
-					
-					
+							<button type="button" class="btn-rob-g re">立即购买</button>
+				 
+						</div>
+					 
+					</a>
 				
-					
-							<li class="list-item active">
-							 
-							<a href="/goods/8228/2/35?time=5月6日&url=">
-						
-								<span class="date-img">
-									<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月6日</p><p>12:00</p></div>
-								</span>
-								<div class="img-wrap">
-									
-        
-
-
-
-
-
-<img alt="" src="static/picture/010105000201-001.jpg" class="shop-img">
-        
-									
-									
-								</div>
-								<div class="rob-last">
-									<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">1.00</span> </div>
-								</div>
-								<div class="shop-name" title="[润佳果业] 海南大香蕉 2支/盒(约200g)">[润佳果业] 海南大香蕉 2支/盒(约200g)</div>
-								<div class="rob-last">
-									 
-									<button type="button" class="btn-rob-g re">立即购买</button>
-									
-									 
-								</div>
-							 
-							</a>
-							
-							</li>
-					
-					
+				</li>
+				@endforeach
 				
-					
-					
-							<li class="list-item">
-								
-									<span class="date-img">
-										<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月7日</p><p>12:00</p></div>
-									</span>
-									<div class="img-wrap">
-										
-									
-        
-
-
-
-
-
-<img alt="" src="static/picture/010104000701-001.jpg" class="shop-img">
-        
-									
-										<img src="static/picture/xqyg.png" alt="" class="xqyg">
-									</div>
-									<div class="rob-last">
-										<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">1.00</span> </div>
-									</div>
-									<div class="shop-name" title="[刘智力] 陕西徐香猕猴桃 6个/盒(约600g)">[刘智力] 陕西徐香猕猴桃 6个/盒(约600g)</div>
-									<div class="rob-last">
-										<button type="button" class="btn-rob-g">立即购买</button>
-									</div>
-								<!-- </a> -->
-							</li>
-					
-				
-					
-					
-							<li class="list-item">
-								
-									<span class="date-img">
-										<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月7日</p><p>12:00</p></div>
-									</span>
-									<div class="img-wrap">
-										
-									
-        
-
-
-
-
-
-<img alt="" src="static/picture/050400247902-001.jpg" class="shop-img">
-        
-									
-										<img src="static/picture/xqyg.png" alt="" class="xqyg">
-									</div>
-									<div class="rob-last">
-										<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">1.00</span> </div>
-									</div>
-									<div class="shop-name" title="[聚品坊] 甜猫绿茶味卷心酥威化饼干 100g/盒">[聚品坊] 甜猫绿茶味卷心酥威化饼干 100g/盒</div>
-									<div class="rob-last">
-										<button type="button" class="btn-rob-g">立即购买</button>
-									</div>
-								<!-- </a> -->
-							</li>
-					
-				
-					
-					
-							<li class="list-item">
-								
-									<span class="date-img">
-										<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月8日</p><p>12:00</p></div>
-									</span>
-									<div class="img-wrap">
-										
-									
-        
-
-
-
-
-
-<img alt="" src="static/picture/010206000101-001.jpg" class="shop-img">
-        
-									
-										<img src="static/picture/xqyg.png" alt="" class="xqyg">
-									</div>
-									<div class="rob-last">
-										<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">9.90</span> </div>
-									</div>
-									<div class="shop-name" title="[超奇果业] 越南红心火龙果 1个/盒(约500g)">[超奇果业] 越南红心火龙果 1个/盒(约500g)</div>
-									<div class="rob-last">
-										<button type="button" class="btn-rob-g">立即购买</button>
-									</div>
-								<!-- </a> -->
-							</li>
-					
-				
-					
-					
-							<li class="list-item">
-								
-									<span class="date-img">
-										<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月8日</p><p>12:00</p></div>
-									</span>
-									<div class="img-wrap">
-										
-									
-        
-
-
-
-
-
-<img alt="" src="static/picture/070103005402-001.jpg" class="shop-img">
-        
-									
-										<img src="static/picture/xqyg.png" alt="" class="xqyg">
-									</div>
-									<div class="rob-last">
-										<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">1.00</span> </div>
-									</div>
-									<div class="shop-name" title="[聚品坊] 陈克明华夏一面经典原味挂面 800g/袋">[聚品坊] 陈克明华夏一面经典原味挂面 800g/袋</div>
-									<div class="rob-last">
-										<button type="button" class="btn-rob-g">立即购买</button>
-									</div>
-								<!-- </a> -->
-							</li>
 					
 				
 			</ul>
 		</div>
-		<!-- 天天特价 -->
-		<div class="point-all" style="height:330px;">
-			<div class="time-esc"><img src="static/picture/ico-kql-mx@2x.png" alt="" class="time-icon"><span class="cost" style="color: black;">距离活动结束 : <span id="dayActivityTime">01</span></span><span class="date-cost">(每天<span>0</span>点开抢)</span></div>
-			<ul class="rob-list">
-				
-				
-						<li class="list-item active">
-						 
-						<a href="/goods/8256/2/36?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tiantiantejia2017.png">
-						 
-							<span class="date-img">
-								<img src="static/picture/tiantiantejia2017.png" alt="">
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/090100002101-001.jpg" class="shop-img">
-        
-								
-								
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">24.00</span> </div>
-							</div>
-							<div class="shop-name" title="[金喜莱商贸] 心相印柔厚新升级金装180g卷纸 10卷/提">[金喜莱商贸] 心相印柔厚新升级金装180g卷纸 10卷/提</div>
-							<div class="rob-last">
-								 
-									<button type="button" class="btn-rob-g re">立即购买</button>
-								
-								 
-							</div>
-						 
-						</a>
-						
-						</li>
-				
-				
-				
-				
-				
-					<li class="list-item">
-							<span class="date-img">
-								<img src="static/picture/tiantiantejia2017.png" alt="">
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010207000101-001.jpg" class="shop-img">
-								<img src="static/picture/xqyg.png" alt="" class="xqyg">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">16.00</span> </div>
-							</div>
-							<div class="shop-name" title="[宜品生活] 智利蓝莓 125g/盒">[宜品生活] 智利蓝莓 125g/盒</div>
-							<div class="rob-last">
-								<button type="button" class="btn-rob-g">立即购买</button>
-							</div>
-					</li>
-				
-				
-				
-				
-					<li class="list-item">
-							<span class="date-img">
-								<img src="static/picture/tiantiantejia2017.png" alt="">
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/020501009701-001.jpg" class="shop-img">
-								<img src="static/picture/xqyg.png" alt="" class="xqyg">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">1.00</span> </div>
-							</div>
-							<div class="shop-name" title="[捷翱商贸] 双汇香辣香脆肠 35g/袋">[捷翱商贸] 双汇香辣香脆肠 35g/袋</div>
-							<div class="rob-last">
-								<button type="button" class="btn-rob-g">立即购买</button>
-							</div>
-					</li>
-				
-				
-				
-				
-					<li class="list-item">
-							<span class="date-img">
-								<img src="static/picture/tiantiantejia2017.png" alt="">
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/040200021601-001.jpg" class="shop-img">
-								<img src="static/picture/xqyg.png" alt="" class="xqyg">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">26.00</span> </div>
-							</div>
-							<div class="shop-name" title="[精益良果] 八零后腰果 180g/罐">[精益良果] 八零后腰果 180g/罐</div>
-							<div class="rob-last">
-								<button type="button" class="btn-rob-g">立即购买</button>
-							</div>
-					</li>
-				
-				
-				
-				
-					<li class="list-item">
-							<span class="date-img">
-								<img src="static/picture/tiantiantejia2017.png" alt="">
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010108004501-001.jpg" class="shop-img">
-								<img src="static/picture/xqyg.png" alt="" class="xqyg">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">12.00</span> </div>
-							</div>
-							<div class="shop-name" title="[拓丰果品] 攀枝花油桃 3个/盒(约300g)">[拓丰果品] 攀枝花油桃 3个/盒(约300g)</div>
-							<div class="rob-last">
-								<button type="button" class="btn-rob-g">立即购买</button>
-							</div>
-					</li>
-				
-				
-				
-				
-					<li class="list-item">
-							<span class="date-img">
-								<img src="static/picture/tiantiantejia2017.png" alt="">
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070300044601-001.jpg" class="shop-img">
-								<img src="static/picture/xqyg.png" alt="" class="xqyg">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">10.50</span> </div>
-							</div>
-							<div class="shop-name" title="[张武食品] 上海梅林午餐肉罐头 340g/罐">[张武食品] 上海梅林午餐肉罐头 340g/罐</div>
-							<div class="rob-last">
-								<button type="button" class="btn-rob-g">立即购买</button>
-							</div>
-					</li>
-				
-				
-			</ul>
-		</div>
-		<!-- 买即赠  -->
-		<div class="point-all" style="height:330px;">
-			<ul class="rob-list rob-list2">
-				
-				<input type="hidden" value="2018/05/31 23:59:59" class="buyAndPersent"/>
-					<a class="buyandparent" href="/goods/8289/0/27">
-						<li class="list-item list-item2 active">
-							<div class="p-text" style="color: black;">
-								距离活动结束还有 : <span class="showTime"></span>
-							</div>
-							<div class="give-buy clearfix">
-								<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070101006301-001.jpg" class="shop-img">
-								<div class="robin"><span>买</span></div></div>
-								<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070300094301-001.jpg" class="shop-img">
-								<div class="robin robin2"><span>赠</span></div></div>
-								<div class="shop-name col-50" title="[聚品坊] 泰味泰国茉莉香米 5kg/袋">[聚品坊] 泰味泰国茉莉香米 5kg/袋</div>
-								<div class="shop-name col-50" title="[中粮旗舰店] 福达坊传统小磨香油 510ml/瓶">[中粮旗舰店] 福达坊传统小磨香油 510ml/瓶</div>
-							</div>
-							<div class="rob-last" style="text-align:center;padding:0">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">99.00</span> <small class="left-price-small add-lineh">节省了14.50</small></div><button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-						</li>
-					</a>
-				
-				<input type="hidden" value="2018/05/31 23:59:59" class="buyAndPersent"/>
-					<a class="buyandparent" href="/goods/8293/0/28">
-						<li class="list-item list-item2 active">
-							<div class="p-text" style="color: black;">
-								距离活动结束还有 : <span class="showTime"></span>
-							</div>
-							<div class="give-buy clearfix">
-								<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/050400249802-001.jpg" class="shop-img">
-								<div class="robin"><span>买</span></div></div>
-								<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/050400249802-001.jpg" class="shop-img">
-								<div class="robin robin2"><span>赠</span></div></div>
-								<div class="shop-name col-50" title="[聚品坊] 爱莲巧草莓牛奶味饼干 190g/袋">[聚品坊] 爱莲巧草莓牛奶味饼干 190g/袋</div>
-								<div class="shop-name col-50" title="[聚品坊] 爱莲巧草莓牛奶味饼干 190g/袋">[聚品坊] 爱莲巧草莓牛奶味饼干 190g/袋</div>
-							</div>
-							<div class="rob-last" style="text-align:center;padding:0">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">11.50</span> <small class="left-price-small add-lineh">节省了11.50</small></div><button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-						</li>
-					</a>
-				
-				<input type="hidden" value="2018/05/31 23:59:59" class="buyAndPersent"/>
-					<a class="buyandparent" href="/goods/8291/0/29">
-						<li class="list-item list-item2 active">
-							<div class="p-text" style="color: black;">
-								距离活动结束还有 : <span class="showTime"></span>
-							</div>
-							<div class="give-buy clearfix">
-								<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070203003701-001.jpg" class="shop-img">
-								<div class="robin"><span>买</span></div></div>
-								<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070103006201-001.jpg" class="shop-img">
-								<div class="robin robin2"><span>赠</span></div></div>
-								<div class="shop-name col-50" title="[中粮旗舰店] 鲁花压榨特香菜籽油 5L/桶">[中粮旗舰店] 鲁花压榨特香菜籽油 5L/桶</div>
-								<div class="shop-name col-50" title="[聚品坊] 陈克明高钙挂面 280g/袋">[聚品坊] 陈克明高钙挂面 280g/袋</div>
-							</div>
-							<div class="rob-last" style="text-align:center;padding:0">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">90.90</span> <small class="left-price-small add-lineh">节省了5.90</small></div><button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-						</li>
-					</a>
-				
-			</ul>
-		</div>
-		<!-- 每周特价 -->
-		<div class="point-all" style="height:330px;">
-			<input type="hidden" value="2018/05/13 23:59:59" id="weekActivity"/>
-			<div class="time-esc"><img src="static/picture/ico-kql-mx@2x.png" alt="" class="time-icon"><span class="cost" style="color: black;">距离活动结束 : <span id="weekActivityTime">01</span></div>
-			<ul class="rob-list">
-				
-							<li class="list-item active">
-								
-								<a href="/goods/8391/2/38?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tj001.png">
-								
-										<span class="date-img">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/tj001.png" class="shop-img">
-											
-										</span>
-										<div class="img-wrap">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/010206001501-001.jpg" class="shop-img">
-										
-										</div>
-										<div class="rob-last">
-											<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">48.00</span> </div>
-										</div>
-										<div class="shop-name" title="[宜品生活] 台湾水仙芒 4个/盒(约1.4kg)">[宜品生活] 台湾水仙芒 4个/盒(约1.4kg)</div>
-										<div class="rob-last">
-											 
-												<button type="button" class="btn-rob-g re">立即购买</button>
-											
-											 
-										</div>
-										
-								</a>
-								
-							</li>
-				
-							<li class="list-item active">
-								
-								<a href="/goods/8389/2/38?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tj001.png">
-								
-										<span class="date-img">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/tj001.png" class="shop-img">
-											
-										</span>
-										<div class="img-wrap">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/030500000401-001.jpg" class="shop-img">
-										
-										</div>
-										<div class="rob-last">
-											<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">53.00</span> </div>
-										</div>
-										<div class="shop-name" title="[隆霆商贸] 蒙牛纯甄酸牛奶 200g*12盒/件">[隆霆商贸] 蒙牛纯甄酸牛奶 200g*12盒/件</div>
-										<div class="rob-last">
-											 
-												<button type="button" class="btn-rob-g re">立即购买</button>
-											
-											 
-										</div>
-										
-								</a>
-								
-							</li>
-				
-							<li class="list-item active">
-								
-								<a href="/goods/8388/2/38?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tj001.png">
-								
-										<span class="date-img">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/tj001.png" class="shop-img">
-											
-										</span>
-										<div class="img-wrap">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/090300009101-001.jpg" class="shop-img">
-										
-										</div>
-										<div class="rob-last">
-											<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">43.80</span> </div>
-										</div>
-										<div class="shop-name" title="[三千禾] 妈妈壹选天然皂液倍柔洗衣液 3kg/瓶">[三千禾] 妈妈壹选天然皂液倍柔洗衣液 3kg/瓶</div>
-										<div class="rob-last">
-											 
-												<button type="button" class="btn-rob-g re">立即购买</button>
-											
-											 
-										</div>
-										
-								</a>
-								
-							</li>
-				
-							<li class="list-item active">
-								
-								<a href="/goods/8387/2/38?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tj001.png">
-								
-										<span class="date-img">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/tj001.png" class="shop-img">
-											
-										</span>
-										<div class="img-wrap">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/070202000703-001.jpg" class="shop-img">
-										
-										</div>
-										<div class="rob-last">
-											<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">23.50</span> </div>
-										</div>
-										<div class="shop-name" title="[中粮旗舰店] 福达坊头道香初榨芝麻油 518ml/瓶 ">[中粮旗舰店] 福达坊头道香初榨芝麻油 518ml/瓶 </div>
-										<div class="rob-last">
-											 
-												<button type="button" class="btn-rob-g re">立即购买</button>
-											
-											 
-										</div>
-										
-								</a>
-								
-							</li>
-				
-							<li class="list-item active">
-								
-								<a href="/goods/8386/2/38?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tj001.png">
-								
-										<span class="date-img">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/tj001.png" class="shop-img">
-											
-										</span>
-										<div class="img-wrap">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/070101005901-001.jpg" class="shop-img">
-										
-										</div>
-										<div class="rob-last">
-											<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">59.00</span> </div>
-										</div>
-										<div class="shop-name" title="[中粮旗舰店] 卡普蒂亚柬埔寨香米 5kg/袋">[中粮旗舰店] 卡普蒂亚柬埔寨香米 5kg/袋</div>
-										<div class="rob-last">
-											 
-												<button type="button" class="btn-rob-g re">立即购买</button>
-											
-											 
-										</div>
-										
-								</a>
-								
-							</li>
-				
-							<li class="list-item active">
-								
-								<a href="/goods/8390/2/38?time=&url=https://xmyoss.oss-cn-hangzhou.aliyuncs.com/goods/watermark/201701013/tj001.png">
-								
-										<span class="date-img">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/tj001.png" class="shop-img">
-											
-										</span>
-										<div class="img-wrap">
-											
-        
-
-
-
-
-
-<img alt="" src="static/picture/010104000703-001.jpg" class="shop-img">
-										
-										</div>
-										<div class="rob-last">
-											<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">14.00</span> </div>
-										</div>
-										<div class="shop-name" title="[刘智力] 陕西徐香猕猴桃 1kg/盒(9-11个)">[刘智力] 陕西徐香猕猴桃 1kg/盒(9-11个)</div>
-										<div class="rob-last">
-											 
-												<button type="button" class="btn-rob-g re">立即购买</button>
-											
-											 
-										</div>
-										
-								</a>
-								
-							</li>
-				
-			</ul>
-		</div>
-		<!-- 热卖商品 -->
-		<div class="point-all" style="height:330px;">
-			<ul class="rob-list rob-list-top">
-				
-						<li class="list-item active" >
-					<a href="/goods/7895/0/0?time=&url=resource/commons/images/rm.png">
-							<span class="date-img">
-								<img src="static/picture/rm.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010103001301-001.jpg" class="shop-img">
-        
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">28.80</span> </div>
-							</div>
-							<div class="shop-name" title="[李广伦] 海南黑美人西瓜 约3kg/个">[李广伦] 海南黑美人西瓜 约3kg/个</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active" >
-					<a href="/goods/7438/0/0?time=&url=resource/commons/images/rm.png">
-							<span class="date-img">
-								<img src="static/picture/rm.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010206002201-001.jpg" class="shop-img">
-        
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">10.40</span> </div>
-							</div>
-							<div class="shop-name" title="[黄晓琼] 台芒 3个/盒(约400g)">[黄晓琼] 台芒 3个/盒(约400g)</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active" >
-					<a href="/goods/7897/0/0?time=&url=resource/commons/images/rm.png">
-							<span class="date-img">
-								<img src="static/picture/rm.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010108004501-001.jpg" class="shop-img">
-        
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">13.80</span> </div>
-							</div>
-							<div class="shop-name" title="[拓丰果品] 攀枝花油桃 3个/盒(约300g)">[拓丰果品] 攀枝花油桃 3个/盒(约300g)</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active" >
-					<a href="/goods/3555/0/0?time=&url=resource/commons/images/rm.png">
-							<span class="date-img">
-								<img src="static/picture/rm.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/020501001702-001.jpg" class="shop-img">
-        
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">4.60</span> </div>
-							</div>
-							<div class="shop-name" title="[新华干副] 沈师傅鸡蛋干 150g/袋">[新华干副] 沈师傅鸡蛋干 150g/袋</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active" >
-					<a href="/goods/5456/0/0?time=&url=resource/commons/images/rm.png">
-							<span class="date-img">
-								<img src="static/picture/rm.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/090100008901-001.jpg" class="shop-img">
-        
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">13.80</span> </div>
-							</div>
-							<div class="shop-name" title="[金喜莱商贸] 亨奇璞竹抽取式面巾纸150抽 3包/提">[金喜莱商贸] 亨奇璞竹抽取式面巾纸150抽 3包/提</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active" >
-					<a href="/goods/4941/0/0?time=&url=resource/commons/images/rm.png">
-							<span class="date-img">
-								<img src="static/picture/rm.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070202001001-001.jpg" class="shop-img">
-        
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">26.50</span> </div>
-							</div>
-							<div class="shop-name" title="[新华干副] 川味乡纯芝麻油 410ml/瓶">[新华干副] 川味乡纯芝麻油 410ml/瓶</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-			</ul>
-		</div>
-		<!-- 新品上市 -->
-		<div class="point-all" style="height:330px;">
-			<ul class="rob-list rob-list-top">
-				
-						<li class="list-item active">
-					<a href="/goods/8344/0/0?time=&url=resource/commons/images/xpss.png">
-							<span class="date-img">
-								<img src="static/picture/xpss.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010108012502-001.jpg" class="shop-img">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">23.00</span> </div>
-							</div>
-							<div class="shop-name" title="[拓丰果品] 云南沃柑 1kg/盒(约6-8个)">[拓丰果品] 云南沃柑 1kg/盒(约6-8个)</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active">
-					<a href="/goods/8346/0/0?time=&url=resource/commons/images/xpss.png">
-							<span class="date-img">
-								<img src="static/picture/xpss.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010108012401-001.jpg" class="shop-img">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">19.00</span> </div>
-							</div>
-							<div class="shop-name" title="[拓丰果品] 云南黑提 750g/盒">[拓丰果品] 云南黑提 750g/盒</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active">
-					<a href="/goods/8193/0/0?time=&url=resource/commons/images/xpss.png">
-							<span class="date-img">
-								<img src="static/picture/xpss.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/010108007801-001.jpg" class="shop-img">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">8.10</span> </div>
-							</div>
-							<div class="shop-name" title="[拓丰果品] 海南青椰子 约2kg/个">[拓丰果品] 海南青椰子 约2kg/个</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active">
-					<a href="/goods/8159/0/0?time=&url=resource/commons/images/xpss.png">
-							<span class="date-img">
-								<img src="static/picture/xpss.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/040200020901-001.jpg" class="shop-img">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">28.80</span> </div>
-							</div>
-							<div class="shop-name" title="[港月果品] 越南炭烧腰果 250g/袋">[港月果品] 越南炭烧腰果 250g/袋</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active">
-					<a href="/goods/5451/0/0?time=&url=resource/commons/images/xpss.png">
-							<span class="date-img">
-								<img src="static/picture/xpss.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/090100008501-001.jpg" class="shop-img">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">6.90</span> </div>
-							</div>
-							<div class="shop-name" title="[金喜莱商贸] 洁柔百花香味手帕纸 12包/条">[金喜莱商贸] 洁柔百花香味手帕纸 12包/条</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-						<li class="list-item active">
-					<a href="/goods/7250/0/0?time=&url=resource/commons/images/xpss.png">
-							<span class="date-img">
-								<img src="static/picture/xpss.png" alt=""><!-- 水印图片 -->
-							</span>
-							<div class="img-wrap">
-								
-        
-
-
-
-
-
-<img alt="" src="static/picture/070203007503-001.jpg" class="shop-img">
-							</div>
-							<div class="rob-last">
-								<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">59.00</span> </div>
-							</div>
-							<div class="shop-name" title="[中粮旗舰店] 福临门精炼一级双低菜籽油 5L/桶">[中粮旗舰店] 福临门精炼一级双低菜籽油 5L/桶</div>
-							<div class="rob-last rob-last-top">
-								<button type="button" class="btn-rob-g re">立即购买</button>
-							</div>
-					</a>
-						</li>
-				
-			</ul>
-		</div>
-		<!-- 热销好货 -->
-		<div class="point-all" style="height: 330px;">
-			<div class="wrap-point" >
-				<a href="/goods/217/0/0" style="color:#666666;text-decoration:none;" >
-					<div class="point-price point1" style=" height:139px;background-image: url(/static/images/010105000204-001.jpg)">
-						<div class="point-name" title="[润佳果业] 海南大香蕉 2kg/盒(约10-14支)" >[润佳果业] 海南大香蕉 2kg/盒(约10-14支)</div>
-						<p class="price">¥ <span>18.40</span></p>
-					</div>
-				</a>
-				<a href="/goods/6322/0/0" style="color:#666666;text-decoration:none;">
-					<div class="point-price point2" style="margin-top: 12px;height:139px;background-image: url(/static/images/090100001601-001.jpg)">
-						<div class="point-name" title="[金喜莱商贸] 唯思青涩抽纸 5包/提">[金喜莱商贸] 唯思青涩抽纸 5包/提</div>
-						<p class="price">¥ <span>19.60</span></p>
-
-					</div>
-				</a>
-			</div>
-			<div class="wrap-point">
-				<a href="/goods/177/0/0" style="color:#666666;text-decoration:none;">
-					<div class="point-price point3 lg-point-price" style="height: 310px;background-image: url(/static/images/010101000105-001.jpg)">
-						<div class="point-name" title="[金龙乡果业] 甘肃静宁红富士 6个/盒(约1.2kg)">[金龙乡果业] 甘肃静宁红富士 6个/盒(约1.2kg)<p class="price">¥ <span>24.20</span></p></div>
-						
-					</div>
-				</a>
-			</div>
-			<div class="wrap-point">
-				<a href="/goods/6436/0/0" style="color:#666666;text-decoration:none;">
-					<div class="point-price point4" style="height:139px;background-image: url(/static/images/070101001201-001.jpg)">
-						<div class="point-name" title="[中粮旗舰店] 福临门泰国茉莉香米 5kg/袋">[中粮旗舰店] 福临门泰国茉莉香米 5kg/袋</div>
-						<p class="price">¥ <span>77.70</span></p>
-						
-					</div>
-				</a>
-				<a href="/goods/6751/0/0" style="color:#666666;text-decoration:none;">
-					<div class="point-price point5" style="margin-top: 12px;height:139px;background-image: url(/static/images/010108000300-001.jpg)">
-						<div class="point-name" title="[严继业] 云南菠萝 约0.75kg/个">[严继业] 云南菠萝 约0.75kg/个</div>
-						<p class="price">¥ <span>6.90</span></p>
-					</div>
-				</a>
-			</div>
-			<div class="wrap-point">
-				<a href="/goods/7118/0/0" style="color:#666666;text-decoration:none;">
-					<div class="point-price point6 lg-point-price" style="height: 310px;background-image:url(/static/images/030400003102-001.jpg);">
-						<div class="point-name" title="[聚品坊] 意文黑啤酒 500ml/瓶">[聚品坊] 意文黑啤酒 500ml/瓶<p class="price">¥ <span>6.50</span></p></div>
-						
-					</div>
-				</a>
-			</div>
-		</div>
+		
 	</div>
+
+
+
+
 	<div class="activity-img w-1250">
 		<div class="sing clearfix sing-bg" style="background-image:url('static/images/甄选导航条-0319.png')">
 			
@@ -2819,6 +1736,78 @@
   })
   
   
+    //alert($);
+
+    //var pointall = document.getElementsByName('point-all');
+    //var pointalls = document.getElementsByTagName('point-all');
+    //var pointalls = document.getElementsByClassName('point-all');
+    var tabspcate = document.getElementById('tabspcate').getElementsByTagName('li');
+    //console.log(tabspcate.length);
+    $('.spcate').mouseover(function(){
+    	$(this).css('border','2px solid red');
+
+    	//console.log($(this).length);
+    	//var id = $(this).text();
+
+    	var id = $(this).val();
+    	//var id = $(this).input[gid];
+
+    	//console.log(id); die;
+    	
+    	$('.rob-list').empty();
+    	$.get('/home/spajax',{id:id},function(data){
+    		
+    		//var res = data;
+
+    		console.log(data.length);
+    		console.log(data);
+
+    		for(var i = 0;i<data.length;i++){
+
+
+    			$('.rob-list').append(`<li class="list-item active">
+				 
+					<a href="/home/spgoods/`+data[i].id+`">
+				
+						<span class="date-img">
+							<div class="tl-time" style="background: url('static/images/date-img22.png') no-repeat;background-size: 100% auto;"><p>5月6日</p><p>12:00</p></div>
+						</span>
+
+						<div class="img-wrap">
+
+			            	<img alt="" src="`+data[i].spicture+`" height="172.99" class="shop-img">
+			
+						</div>
+						<div class="rob-last">
+							<div class="left-price left-price-r"><span class="zh-money">¥</span> <span class="left-price-choos">`+data[i].sprice+`</span> </div>
+						</div>
+
+						<div class="shop-name" title="[聚品坊] 爱莲巧榛子花生味饼干 190g/袋">`+data[i].sname+`</div>
+						<div class="rob-last">
+							 
+							<button type="button" class="btn-rob-g re">立即购买</button>
+				 
+						</div>
+					 
+					</a>
+				
+				</li>`);
+
+
+    		}
+    		
+    	})
+
+
+    })
+
+    $('.spcate').mouseout(function(){
+    	$(this).css('border','');
+    	//$('.rob-list').eq(0).empty();
+
+    })
+
+
   
   </script>
   </body>

@@ -235,11 +235,14 @@
                         
                      <li>
                         <a href="#">
-                            <i class="icon-users" ></i>广告管理
+                            <i class="icon-users" ></i>特价商品管理
                         </a>
                         <ul class="closed">
-                            <li><a href="/admin/user/create">添加广告</a></li>
-                            <li><a href="/admin/user">浏览广告</a></li>
+                            <li><a href="/admin/spcate/create">添加促销活动名称</a></li>
+                            <li><a href="/admin/spcate">浏览促销活动名称</a></li>
+                            <li><a href="/admin/special/create">添加特价商品</a></li>
+                            <li><a href="/admin/special">管理特价商品</a></li>
+                            <li><a href="/admin/lian">练习</a></li>
                             
                         </ul>
                     </li>
@@ -302,12 +305,14 @@
     </div>
 
     <!-- JavaScript Plugins -->
+    <link href="/static/css/goods_detail_1.css" type="text/css" rel="stylesheet" />
     <script src="/admin/js/libs/jquery-1.8.3.min.js"></script>
     <script src="/admin/js/libs/jquery.mousewheel.min.js"></script>
     <script src="/admin/js/libs/jquery.placeholder.min.js"></script>
     <script src="/admin/custom-plugins/fileinput.js"></script>
     
     <!-- jQuery-UI Dependent Scripts -->
+
     <script src="/admin/jui/js/jquery-ui-1.9.2.min.js"></script>
     <script src="/admin/jui/jquery-ui.custom.min.js"></script>
     <script src="/admin/jui/js/jquery.ui.touch-punch.js"></script>

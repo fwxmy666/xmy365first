@@ -51,6 +51,8 @@ Route::group(['middleware'=>'login'],function(){
 
 		//后台商品类别
 	Route::resource('admin/category','admin\category\CategoryController');
+		//后台商品类别详情
+	Route::get('admin/spcatedetails/{id}','admin\spcate\SpcatedetailsController@index');
 
 		//后台订单管理
 	Route::resource('admin/orders','admin\OrdersController');
@@ -71,9 +73,17 @@ Route::group(['middleware'=>'login'],function(){
 	//后台友情链接
 	Route::resource('admin/friends','admin\FriendsController');
 
+	//后台特价商品促销
+	Route::resource('admin/special','admin\special\SpecialController');
+	//特价商品多张图片
+	Route::get('admin/special/{id}/spde','admin\special\SpdetailsController@spde');
+	//特价商品详情图片
+	Route::get('admin/special/{id}/spdmore','admin\special\SpdmoreController@spdmore');
+	Route::get('admin/lian','admin\special\SpdmoreController@lian');
+	
 
-
-
+	//后台促销活动名称添加
+	Route::resource('admin/spcate','admin\spcate\SpcateControler');
 
 
 });
@@ -90,6 +100,9 @@ Route::get('home/list','home\IndexController@list');
 //前台轮播图
 Route::get('lunbo/lunbodetails/{lid}','home\lunbo\LunbodetailsController@index');
 
-
-
+//前台特价ajax
+Route::get('home/spajax','home\IndexController@spajax');
+//前台特价商品详情页面
+Route::get('home/spgoods/{id}','home\IndexController@spgoods');
+ 
 

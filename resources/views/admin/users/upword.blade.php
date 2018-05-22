@@ -7,7 +7,7 @@
     	<span>{{$title}}</span>
     </div>
 	
-	@if (count($errors) > 0)
+	   @if (count($errors) > 0)
 		    		<div class="mws-form-message error">
 		        <ul>
 		            @foreach ($errors->all() as $error)
@@ -16,6 +16,8 @@
 		        </ul>
 		    </div>
 		@endif
+
+        
 			{{session('msg')}}	
     <div class="mws-panel-body no-padding">
 		

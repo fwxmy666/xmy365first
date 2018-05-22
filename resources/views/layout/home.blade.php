@@ -7,11 +7,8 @@
 
 
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="/static/css/style_1.css">
 
-<link rel="stylesheet" type="text/css" href="/static/css/easydialog_1.css">
 
-	<link rel="stylesheet" type="text/css" href="/static/css/type_search_1.css">
   </head>
   
   <body>
@@ -1560,7 +1557,7 @@
 
 </footer>
 
-<script type="text/javascript" src="/static/js/jquery-1.9.1.min_1.js"></script>
+
 <script type="text/javascript" src="/static/js/public_1.js"></script>
 
 <script type="text/javascript" src="/static/js/easydialog.min_1.js"></script>
@@ -1583,10 +1580,31 @@
   	<i class="iconfont" style="margin-right:7px;font-size:16px;">&#xe650;</i>杨桃妹妹
   	<i id="close" class="iconfont" style="float:right;margin-right:15px;background:#FFF;color:#358812;font-size:12px;border:1px solid #358812;line-height:normal;padding:1px 2px;border-radius:3px;position:relative;top:7px;cursor: pointer;">&#xe676;</i></div>
 </div>
+	
+	<link href="/static/css/goods_detail_1.css" type="text/css" rel="stylesheet" />
 
+	<link href="/static/css/idangerous.swiper2.7.6_1.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="/static/css/style_1.css">
+
+	<link rel="stylesheet" type="text/css" href="/static/css/easydialog_1.css">
+
+	<link rel="stylesheet" type="text/css" href="/static/css/type_search_1.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/cartscroll_1.css">
+
+  
+  <script language="javascript" type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/static/js/goods_search_1.js"></script>
   <script type="text/javascript" src="/static/js/menu_1.js"></script>
   <script type="text/javascript" src="/static/js/type_search_1.js"></script>
+  <script type="text/javascript" src="/static/js/goods_search_1.js"></script>
+  <script type="text/javascript" src="/static/js/goods_detail_1.js"></script>
+  <script type="text/javascript" src="/static/js/cartscroll_1.js"></script>
+  <script type="text/javascript" src="/static/js/idangerous.swiper2.7.6.min_1.js"></script>
+  <script src="/static/js/menu_1.js"></script>
+
+
+
+
  @section('js')
 
  @show
